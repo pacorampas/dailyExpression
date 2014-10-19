@@ -1,0 +1,114 @@
+.card-out {
+	position: absolute;
+	border-radius: 0.5rem;
+	background-color: #fff;
+	height: 90%;
+	top: 5%;
+	width: 90%;
+	margin-left: 5%;
+}
+
+.card-out h1.out {
+	font-weight: normal;
+	text-align: center;
+	font-size: 2.5rem;
+}
+
+.card-out p.copy {
+	text-align: center;
+	font-size: 2.2rem;
+	padding: 0 2.5rem;
+	line-height: 2.8rem;
+	color: #666;
+}
+
+.card-out h1.out em {
+	font-weight: bold;
+	font-style: normal;
+}
+
+.button-out-skip {
+	position: absolute;
+	top: 0.5rem;
+	right: 1.5rem;
+}
+
+.button-out-skip::before {
+	color: #999;
+}
+
+.button-out-skip::before {
+	font-size: 1.8rem;
+}
+
+/*
+.teacher {
+	position: relative;
+	margin: 0 auto;
+	width: 8.5rem;
+}
+
+.teacher::before {
+	content: "";
+	display: block;
+	padding-bottom: 160%;
+	background: url(img/teacher-login.png);
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+*/
+
+.teacher {
+	position: relative;
+	margin: 0 auto;
+	width: 36%;
+	height: 100%;
+	display: table;
+}
+
+.teacher::before {
+	content: "";
+	display: table-cell;
+	padding-bottom: 160%;
+	background: url(img/teacher-login.png);
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.card-out > article {
+	display: table;
+	width: 100%;
+}
+
+.card-out article > section,
+.card-out article > h1,
+.card-out article > p {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+
+.card-out article.one {
+	height: 20%;
+}
+
+.card-out article.two {
+	height: 45%;
+}
+
+.card-out article.three {
+	height: 35%;
+}
+
+@media (max-height: 600px) {
+  .card-out .de-card {
+	height: 20rem;
+  }
+}
+
+@media (max-height: 480px) {
+  .card-out .de-card {
+	height: 18rem;
+  }
+}

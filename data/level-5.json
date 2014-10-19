@@ -1,0 +1,51 @@
+{
+    "id": 5,
+    "value": "nivel quinto",
+    "expressions": [
+      {
+        "id": 10,
+        "value": "value expression decima",
+        "explanation": "explicación expresión decima",
+        "contexts": [
+          {
+            "id": 10,
+            "value": "contexto uno expresión decima",
+            "answers": [
+              "respuesta uno contexto uno expresión decima",
+              "respuesta dos contexto uno expresión decima"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 11,
+        "value": "value expression onceava",
+        "explanation": "explicación expresión onceava",
+        "contexts": [
+          {
+            "id": 11,
+            "value": "contexto uno expresión onceava",
+            "answers": [
+              "respuesta uno contexto uno expresión onceava",
+              "respuesta dos contexto uno expresión onceava"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 12,
+        "value": "value expression doceava",
+        "explanation": "explicación expresión doceava",
+        "contexts": [
+          {
+            "id": 12,
+            "value": "contexto uno expresión doceava",
+            "answers": [
+              "respuesta uno contexto uno expresión doceava",
+              "respuesta dos contexto uno expresión doceava"
+            ]
+          }
+        ]
+      }
+    ]
+  }

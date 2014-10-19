@@ -1,0 +1,30 @@
+
+<section class="wrapper-content buttons-on-bottom two-btn">
+	<div class="home-progress">
+	  <a href="#/register">
+	  	<h1>YOUR PROGRESS</h1>
+	  </a>
+	  <canvas id="home-progress-canvas"></canvas>
+	  <div id="home-passed" class="passed">
+	  	<span>{{passed}}<span>DAILIES PASSED</span></span>
+	  </div>
+	  <div id="home-level" class="level perc-{{perc}}">
+	  	<span>{{level}}<span>LEVEL</span></span>
+	  </div>
+	</div>
+</section>
+<section class="wrapper-buttons wp-btn-bottom">
+	<button id="btn-daily" class="de-button" onClick="window.location = '#/daily'">Your Daily</button>
+	<button id="btn-practice" class="de-button" onClick="window.location = '#/practice'">Practice</button>
+	<button class="de-button counter dark" onClick="window.location = '#/review'">
+		Review
+		<span class="count">
+			{{countErrors}}
+		</span>
+	</button>
+</section>
+
+
+<div style="height: 4rem; width: 4rem; position: absolute; top: 5.2rem; left: 0; background: red; z-index: 100000; display: none" onClick="alarms()">
+	alarms
+</div>

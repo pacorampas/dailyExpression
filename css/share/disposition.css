@@ -1,0 +1,74 @@
+.content-app {
+	position: absolute;
+	top: 4.8rem;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	height: auto; /* quitar al eleminar structure .content-app */
+	overflow: hidden;
+	transition: top 0.5s;
+	-webkit-transition: top 0.5s;
+}
+
+.header-app[hidden] ~ .content-app,
+.header-app.hidden ~ .content-app {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+
+/* content */
+.wrapper-content {
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	z-index: -1;
+	padding: 1.6rem 0 0 0;
+	z-index: 10;
+}
+
+.wrapper-content.not-padding {
+	padding: 0;
+}
+
+.wrapper-content.header-on-top {
+	top: 5rem;
+}
+
+.wrapper-content.buttons-on-bottom {
+	bottom: 8.2rem;
+}
+
+.wrapper-content.buttons-on-bottom.two-btn {
+	bottom: 14rem;
+}
+
+.wrapper-content.textarea-on-bottom {
+	bottom: 4.5rem;
+}
+
+
+
+/* wrapper buttons */
+.wrapper-buttons {
+	position: absolute;
+	right: 0;
+	left: 0;
+	z-index: -1;
+	padding: 1.6rem 0;
+	z-index: 11;
+}
+
+.wrapper-buttons .de-button:last-child {
+	margin-bottom: 0;
+}
+
+.wrapper-buttons.wp-btn-bottom {
+	bottom: 0;
+}
+
+

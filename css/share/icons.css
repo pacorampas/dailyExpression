@@ -1,0 +1,65 @@
+/* icons */
+button.icon {
+	display: inline-block;
+	height: 3rem;
+	width: 3rem;
+	background: none;
+	background-position: center;
+	background-size: 3rem;
+	background-repeat: no-repeat;
+	border: none;
+	text-align: center;
+	line-height: 3rem;
+}
+
+button.icon.icon-text-icon {
+	width: auto;
+	height: auto;
+}
+
+button.icon:active {
+	opacity: 0.6;
+}
+
+.icon-search {
+	background-image: url(img/icon-search.svg);
+}
+
+.icon-info {
+	background-image: url(img/icon-info.svg) !important;
+}
+
+.icon-back {
+	background-image: url(img/icon-arrow-back-dark.svg) !important;
+}
+
+.icon-back-white {
+	background-image: url(img/icon-arrow-back.svg) !important;
+}
+
+.icon-next-white {
+	transform: rotate(180deg);
+	-webkit-transform: rotate(180deg);
+	background-image: url(img/icon-arrow-back.svg) !important;
+}
+
+.icon-text-icon::before {
+	content: attr(text-icon);
+	text-align: center;
+	font-size: 2rem;
+	line-height: 3rem;
+	color: #6e6e6e;
+	font-family: arial;
+}
+
+.icon-text-icon.medium::before {
+	font-size: 2.5rem;
+}
+
+.icon.right {
+	float: right;
+}
+
+.icon.left {
+	float: left;
+}

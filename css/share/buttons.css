@@ -1,0 +1,148 @@
+/* anchors buttons*/
+a,
+button,
+.de-button {
+	-webkit-user-select: none;
+	-webkit-tap-highlight-color: transparent;
+	outline: none;
+}
+
+/* daily expression buttons */
+.de-button {
+	position: relative;
+	display: inline-block;
+	width: 100%;
+	height: 5rem;
+	border: none;
+	margin: 0 auto 0.8rem auto;
+	color: #fff;
+	background: none;
+	font-size: 1.8rem;
+	line-height: 4.8rem; /* 4.8rem instead 5rem for compensate the border bottom*/
+	text-align: center;
+	z-index: 1;
+	/*Reset*/
+	outline: none;
+}
+
+.de-button::before {
+	content: "";
+	position: absolute;
+	display: block;
+	top: 0;
+	right: 1.6rem;
+	bottom: 0;
+	left: 1.6rem;
+	border-radius: 0.5rem;
+	border-bottom: solid 0.2rem #4895a0;
+	background: #4ec0ce;
+	z-index: -1;
+}
+
+.de-button:active {
+	top: 0.2rem;
+}
+
+.de-button:active::before {
+	opacity: 0.8;
+	border-bottom: 0;
+	top: 0.2rem;
+}
+
+/* colors */
+.de-button.dark::before {
+	background: #6e6e6e;
+	border-bottom-color: #3c3c3b;
+}
+
+.de-button.dark-blue::before {
+	background: #1c7b89;
+	border-bottom-color: #0a6878;
+}
+
+.de-button.red::before {
+	background: #F17059;
+	border-bottom-color: #D94B3D;
+}
+
+.de-button.white::before {
+	background: #fff;
+	border: solid 0.1rem #ddd;
+	border-bottom: solid 0.2rem #ddd;
+	color: #999;
+}
+
+.de-button.white:active::before {
+	border-bottom: solid 0.1rem #ddd;
+	background-color: rgba(10, 10, 10, 0.1);
+}
+
+.de-button.white {
+	color: #999;
+}
+
+/* button counter */
+.de-button.counter span.count {
+	background: #ea694e;
+	position: absolute;
+	top: 0;
+	right: 1.6rem;
+	bottom: 0;
+	width: 6.5rem;
+	height: 4.8rem;
+	border-radius: 2rem 0.5rem 0.5rem 2rem / 6rem 0.5rem 0.5rem 6rem;
+	z-index: 2;
+}
+
+.de-button.counter:active span.count {
+	top: 0.2rem;
+	opacity: 0.8;
+}
+
+.de-button.counter::after { /* borde inferior*/
+	content: "";
+	position: absolute;
+	right: 1.6rem;
+	bottom: 0;
+	width: 6.5rem;
+	height: 4rem;
+	border-right: solid 0.2rem #bb4d40;
+	border-bottom: solid 0.2rem #bb4d40;
+	border-radius: 0 0 0.5rem 2rem / 0 0 0.5rem 6rem;
+}
+
+.de-button.counter:active::after { /* borde inferior*/
+	display: none;
+}
+/* half button */
+.de-button.half {
+	display: inline-block !important;
+	width: 50% !important;
+	float: left;
+}
+
+.de-button.half::before {
+	right: 0.8rem;
+}
+
+.de-button.half + .de-button.half::before {
+	right: 1.6rem;
+	left: 0.8rem;
+}
+
+.buttons-half .de-button:last-child {
+	
+}
+
+.de-button a {
+	width: 100%;
+	height: 100%;
+	display: block;
+	text-decoration: none;
+	color: #fff;
+}
+
+.de-button a:active {
+	background: transparent;
+}
+

@@ -1,0 +1,108 @@
+.home-progress {
+  position: relative;
+  width: 190px; /* 190px default, se setea en js*/
+  height: 190px; /* 190px default */
+  text-align: center;
+  margin: 0 auto;
+  top: 16rem;
+}
+
+.home-progress h1 {
+  position: absolute;
+  width: 100%;
+  top: -3.5rem;
+  color: #363a35;
+}
+
+.passed {
+  display: table;
+  position: absolute;
+  left: 10%;
+  top: 10%;
+  width: 80%;
+  height: 40%;
+  background-color: #6fce7e;
+  -webkit-border-radius: 10000 10000 0 0;
+  border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+}
+
+.level {
+  display: table;
+  position: absolute;
+  left: 10%;
+  top: 50%;
+  width: 80%;
+  height: 40%;
+  background-color: #ffde66;
+  -webkit-border-radius: 0 0 10000 10000;
+  border-radius: 0 0 50% 50% / 0 0 100% 100%;
+  overflow: hidden;
+}
+
+.passed > span,
+.level > span {
+  display: table-cell;
+  vertical-align: middle;
+  height: 100%;
+  font-size: 3rem;
+  font-style: bold;
+  box-sizing: border-box;
+}
+
+.passed > span {
+  color: #31673f;
+}
+
+.level > span {
+  color: #c8531d;
+  background-image: url(img/bg-level.svg);
+  background-repeat: repeat-x;
+  background-position: center top;
+}
+
+.passed > span span,
+.level > span span {
+  display: block;
+  font-size: 0.4em;
+}
+
+
+.level.perc-0 > span{
+ background-size: auto 0%;
+}
+.level.perc-1 > span{
+ background-size: auto 10%;
+}
+.level.perc-2 > span{
+ background-size: auto 20%;
+}
+.level.perc-3 > span{
+ background-size: auto 30%;
+}
+.level.perc-4 > span{
+ background-size: auto 40%;
+}
+.level.perc-5 > span{
+ background-size: auto 50%;
+}
+.level.perc-6 > span{
+ background-size: auto 60%;
+}
+.level.perc-7 > span{
+ background-size: auto 70%;
+}
+.level.perc-8 > span{
+ background-size: auto 80%;
+}
+.level.perc-9 > span{
+ background-size: auto 90%;
+}
+.level.perc-10 > span{
+ background-size: auto 100%;
+}
+
+
+.home-progress canvas {
+  width: 100%;
+  height: 100%;
+}

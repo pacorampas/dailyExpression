@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en" >
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no">
+	<title>DailyExpression</title>
+	
+	<link rel="stylesheet" type="text/css" href="css/share/header.css">
+	<link rel="stylesheet" type="text/css" href="css/share/input.css">
+	<link rel="stylesheet" type="text/css" href="css/share/icons.css">
+	<link rel="stylesheet" type="text/css" href="css/share/font.css">
+
+	<!-- Elements -->
+	<link rel="stylesheet" type="text/css" href="css/share/disposition.css">
+	<link rel="stylesheet" type="text/css" href="css/share/buttons.css">
+	<link rel="stylesheet" type="text/css" href="css/share/card.css">
+	<link rel="stylesheet" type="text/css" href="css/share/filters.css">
+	<link rel="stylesheet" type="text/css" href="css/share/search.css">
+	<link rel="stylesheet" type="text/css" href="css/share/modal.css">
+
+	<link rel="stylesheet" type="text/css" href="css/out.css">
+	<link rel="stylesheet" type="text/css" href="css/login_register_media.css">
+	<link rel="stylesheet" type="text/css" href="css/home_progress.css">
+	<link rel="stylesheet" type="text/css" href="css/review.css">
+	<link rel="stylesheet" type="text/css" href="css/practice.css">
+
+	<script src='lib/angular/angular.min.js'></script>
+	<script src='lib/angular/angular-route.min.js'></script>
+	<script src='lib/angular/angular-resource.min.js'></script>
+	<script src='lib/angular/angular-touch.min.js'></script>
+	
+	<script src='app/app.js'></script>
+	<script src='app/routing.js'></script>
+	<script src='controllers/OutController.js'></script>
+	<script src='controllers/LoginController.js'></script>
+	<script src='controllers/RegisterController.js'></script>
+	<script src='controllers/HomeController.js'></script>
+	<script src='controllers/DailyController.js'></script>
+	<script src='controllers/PracticeController.js'></script>
+	<script src='controllers/PracticeErrorsController.js'></script>
+	<script src='controllers/ReviewController.js'></script>
+	<script src='controllers/FakeController.js'></script>
+
+	<script src='directives/headerDirective.js'></script>
+	<script src='directives/loginDirective.js'></script>
+	<script src='directives/dailyDirective.js'></script>
+	<script src='directives/reviewDirective.js'></script>
+	<script src='directives/practiceDirective.js'></script>
+	<script src='directives/modalDirective.js'></script>
+	
+	<script src='services/practiceService.js'></script>
+	<script src='filters/reviewFilter.js'></script>
+
+	<!-- New services -->
+	<script src='services/dataService.js'></script>
+	<script src='services/alarmService.js'></script>
+	<script src='services/fakeService.js'></script>
+	<script src='services/expressionService.js'></script>
+	<script src='services/progressCircleService.js'></script>
+
+	<!-- Carousel -->
+	<link rel="stylesheet" type="text/css" href="css/angular-carousel.css">
+	<script src='lib/plugin/angular-carousel.js'></script>
+
+</head>
+<body>
+	<button modal-review modal-expression="i am a expression" modal-explanation="I am a explanation">review</button>
+
+	<header id="header-app" class="header-app transparent">
+		<div id="header-login-register" class="header-in close">
+			<a href="#/out"><h1 class="button-back dark register" back-out>Review</h1></a>
+		</div>
+		<div id="header-home" class="header-in close">
+			<h1>
+				<span class="logo"></span>
+				DailyExpression
+			</h1>
+		</div>
+		<div id="header-review" class="header-in close">
+			<h1 class="button-back" back-review>
+				<span class="logo"></span>
+				Review
+			</h1>
+			<input id="review-search-header" type="text" class="search-header icon icon-search" placeholder="Search" ng-model="searchByWord" show-search>
+			<div id="hide-search" class="hide-search" hide-search></div>
+		</div>
+		<div id="header-daily" class="header-in close">
+			<button class="icon icon-text-icon medium" text-icon="X" onClick="window.location = '#/home'"></button>
+		</div>
+		<div id="header-practice" class="header-in close header-practice">
+			<button class="icon icon-text-icon" text-icon="QUIT" quit-button></button>
+		</div>
+	</header>
+
+	<section ng-view id="content-app" class="content-app">
+	</section>
+
+	<!-- modal -->
+	<section ng-controller="MoldalCtrl"></section>
+
+</body>
+<script src="cordova.js"></script>
+<script src='services/headerService.js'></script>
+
+<!-- Puebas disposition -->
+<script>
+	function hiddeHeader() {
+		var ele = document.getElementById('header-app');
+		ele.classList.toggle('transparent');
+	}
+	function flip() {
+		var ele = document.getElementById('flip-container');
+		ele.classList.toggle('flip');
+	}
+</script>
+
+<script>
+	//document.addEventListener("deviceready", function(){
+	   //start angular after phonegap is ready
+	   angular.bootstrap(document, ['Daily']);
+
+	   //and active de alarms triggered
+	   window.plugin.notification.local.ontrigger = function (id, state, json) {
+	    json = JSON.parse(json);
+	    if(json.type == 'daily'){
+	    	window.location = "#/daily";
+	    }
+	    else if(json.type == 'practice'){
+	       	localStorage.practice = '1';
+	    }
+	  };
+	//}, false);
+</script>
+</html>

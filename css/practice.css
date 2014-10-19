@@ -1,0 +1,98 @@
+.hidden {
+	display: none !important;
+}
+
+.practice-footer {
+	display: table;
+	height: 2rem;
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #fff;
+	padding: 0.8rem 1.6rem;
+	border-top: solid 0.1rem #ddd;
+	z-index: 10;
+}
+
+.wrapper-textarea {
+	display: table-cell;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	border: none;
+	border-radius: 0.5rem;
+	overflow: hidden;
+	vertical-align: middle;
+}
+
+.wrapper-textarea textarea {
+	width: 100%;
+	height: 100%;
+	min-height: 2rem;
+	font-family: "bariol";
+	font-size: 1.8rem;
+	border: none;
+	resize: none;
+	color: #666;
+	padding-top: 0.4rem;
+
+	/*Reset*/
+	outline: none;
+	-webkit-user-select: none;
+	-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+	-webkit-focus-ring-color: rgba(255, 255, 255, 0);
+    -webkit-user-modify: read-write-plaintext-only;
+}
+
+.wrapper-textarea textarea:focus {
+	color: #4ec0ce;
+}
+
+.practice-footer.active .wrapper-textarea textarea {
+	color: #4ec0ce;
+}
+
+.practice-footer button {
+	display: table-cell;
+	width: 5.4rem;
+	height: 100%;
+	margin-left: 1.6rem;
+	font-size: 1.7rem;
+	color: #999;
+	background: none;
+	border: none;
+	font-weight: bold;
+	font-family: "bariol";
+}
+
+.practice-footer.active button {
+	color: #4ec0ce;
+}
+
+/* Erros or ok */
+.flip-container.error .back {
+	background-color: rgba(255, 0, 0, 0.2);
+}
+
+.flip-container.ok .back {
+	background-color: rgba(0, 255, 0, 0.2);
+}
+
+@media screen and (min-aspect-ratio: 1/1) {
+	.header-practice, .flip-container h1 {
+		display: none;
+	}
+	.content-practice .flip-container {
+		margin-top: 0.8rem;
+	}
+	.content-practice .de-card {
+		height: 22rem;
+	}
+	.content-practice .de-card p {
+		margin-top: 0;
+	}
+	.content-practice.wrapper-content.textarea-on-bottom.not-padding {
+		top: -5rem;
+	}
+}

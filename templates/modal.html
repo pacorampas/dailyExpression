@@ -1,0 +1,17 @@
+<section id="de-modal" class="de-modal">
+	<header>{{ values.title }}</header>
+
+	<section class="modal-content" ng-if="values.content.review != true">
+		{{ values.content }}
+	</section>
+	<section class="modal-content" ng-if="values.content.review == true">
+		<h1>EXPRESSION</h1>
+		<p>{{ values.content.expression }}</p>
+		<h1>EXPLANATION</h1>
+		<p>{{ values.content.explanation }}</p>
+	</section>
+	
+	<footer>
+		<button class="de-button dark" modal-dir modal-hide>CLOSE</button>
+	</footer>
+</section>

@@ -1,0 +1,23 @@
+<section class="wrapper-content buttons-on-bottom not-padding">
+
+	<section class="filter">
+		<button id="review-filter-all" class="active" filter-action="2">ALL</button>
+		<button id="review-filter-passed" filter-action="1">PASSED</button>
+		<button id="review-filter-failed" filter-action="0">FAILED</button>
+	</section>
+
+	<ul class="review-list">
+		<li ng-repeat="level in levels">
+			<ul class="review-list-expressions">
+				<li ng-repeat="expression in level.expressions | filter: {value: searchByWord} | byCorrect:searchByCorrect" class="correct-{{ expression.id | isCorrect }}" modal-dir modal-open modal-review modal-explanation="{{ expression.explanation }}" modal-expression="{{ expression.value }}">
+					{{ expression.value }}
+				</li>
+				<header>level: {{level.id}}</header> <!-- cambiado orden lógico como aparecen para poder ocularlo cuando no tiene hermanos selector: ul.review-list li ~ header; -->
+			</ul>
+		</li>
+	</ul>
+</section>
+<section class="wrapper-buttons wp-btn-bottom">
+	<button class="de-button dark">Review</button>
+</section>
+

@@ -1,0 +1,68 @@
+<style>
+	.wrapper-slider {
+		position: absolute;
+		top: 0;
+		right: 0;
+		left: 0;
+		bottom: 0;
+		background: #5abfce;
+	}
+
+	.slider-container {
+		height: 100%;
+	}
+</style>
+
+<section class="content-out">
+
+	<ul rn-carousel class="image slider-container">
+
+		<li>
+			<section class="card-out">
+				<button class="button-out-skip icon icon-text-icon" text-icon="SKIP"></button>
+				<article class="one">
+					<h1 class="out">Dailies!</h1>
+				</article>
+				<article class="two">
+					<section card flip 
+						data="{value: 'Beat around the bush', explanation: 'This is an explanation' }" 
+						title-front='YOUR DAILY'
+						value-front='Beat around the bush'
+						title-back='EXPLANATION'
+						value-back='Explanation of expression'
+					></section>
+				</article>
+				<article class="three">
+					<p class="copy">
+						You get one expression per day. Tap on the card to see the explanation.
+					</p>
+				</article>
+			</section>
+		</li>
+
+		<li>
+			<section class="card-out">
+				<article class="one" style="height: 27%;">
+					<h1 class="out">Start using <br><em>DailyExpression</em><br> today!</h1>
+				</article>
+				
+				<article class="two">
+					<div class="teacher"></div>
+				</article>
+				<article class="three" style="height: 28%;">
+					<section class="buttons-two buttons-out">
+						
+						<button style="z-index: 999999" class="de-button red" onClick="window.location = '#/fake_data'">
+							Fake data
+						</button>
+						<button style="z-index: 999999" class="de-button white" onClick="window.location = '#/login'">
+							login
+						</button>
+					</section>
+				</article>
+			</section>
+		</li>
+		
+	</ul>
+	
+</section>

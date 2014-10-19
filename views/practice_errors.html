@@ -1,0 +1,20 @@
+<section class="content-practice wrapper-content textarea-on-bottom not-padding">
+	<section card 
+		title-front="PUT IN PRACTICE" 
+		value-front="{{context.value}}" 
+		title-back="{{expression.value}}"
+		value-back="{{expression.explanation}}"
+		class="hide-flip-button"
+	></section>
+</section>
+
+<section id="practice-footer" class="practice-footer">
+	<div class="wrapper-textarea">
+		<textarea ng-model="answer" active-check-button placeholder="Type your answer..." auto-height></textarea>
+	</div>
+	<button send-answer-error-btn="scope">CHECK</button>
+</section>
+
+<section id="practice-footer-button" class="wrapper-buttons hidden wp-btn-bottom">
+	<button class="de-button" onClick="window.location = '#/home'">CONTINUE</button>
+</section>

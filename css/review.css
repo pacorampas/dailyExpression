@@ -1,0 +1,82 @@
+ul.review-list {
+	position: absolute;
+	right: -2rem;
+	left: 0px;
+	top: 4.8rem;
+	bottom: 0px;
+	padding-right: 2rem;
+	list-style: outside none none;
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+
+ul.review-list header {
+	background: rgba(230, 230, 230, 0.5);
+	font-size: 1.2rem;
+	padding: 0.5rem;
+	text-align: center;
+	display: none;
+	border-radius: 2rem;
+
+	/* para cambiar el orden que tiene en el html, donde aparece el header al final para poder ocultarlo y mostrarlo
+	segun los hijos que tenga selector: ul.review-list li ~ header; */
+	position: absolute;
+	top: 0.3rem;
+	left: 10rem;
+	right: 10rem;
+}
+
+ul.review-list li ~ header {
+	display: block;
+}
+
+ul.review-list-expressions {
+	width: 100%;
+	height: 100%;
+	list-style: none;
+
+	/* para cambiar el orden que tiene en el html, donde aparece el header al final para poder ocultarlo y mostrarlo
+	segun los hijos que tenga selector: ul.review-list li ~ header; */
+	position: relative;
+	padding-top: 2.8rem;
+}
+
+ul.review-list-expressions li {
+	position: relative;
+	margin: 0 auto;
+	padding: 0 3rem;
+	font-size: 2rem;
+	height: 6rem;
+	line-height: 6rem;
+	box-sizing: border-box;
+	transition: bottom 1s, top 2s;
+}
+
+ul.review-list-expressions li:active {
+	background: rgba(120, 200, 208, 0.2);
+}
+
+ul.review-list-expressions li:active::before,
+ul.review-list-expressions li:active + li::before {
+	display: none;
+}
+
+ul.review-list-expressions li::before {
+	content: "";
+	top: -0.1rem;
+	left: 1.6rem;
+	right: 1.6rem;
+	background: #e6e6e6;
+	height: 0.1rem;
+	display: block;
+	position: absolute;
+}
+
+ul.review-list-expressions li:first-child::before {
+	display: none;
+}
+
+ul.review-list-expressions li.correct-false {
+	color: #d94b3d;
+	font-weight: 700;
+}

@@ -1,0 +1,109 @@
+.de-card {
+	position: relative;
+	height: 27rem;
+	margin: 0px 1.6rem;
+	text-align: center;
+	font-size: 1.5rem;
+	border-radius: 0.5rem;
+	color: #555;
+}
+
+.de-card h1 {
+	height: 5rem;
+	width: 100%;
+	line-height: 5rem;
+	font-size: 1.5rem;
+}
+
+.de-card p {
+	display: table;
+	height: 100%;
+	width: 94%;
+	margin-left: 3%;
+	margin-top: -5rem; /* es lo que mide el h1 */
+	padding: 0 1.6rem;
+	font-size: 2.8em;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.de-card p span {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.de-card .info-button {
+	position: absolute;
+	right: 0.8rem;
+	top: 0.8rem;
+	background-size: 4rem;
+}
+
+.hide-flip-button .info-button {
+	display: none;
+}
+
+/* entire container, keeps perspective */
+.flip-container {
+	-webkit-perspective: 1000;
+	perspective: 1000;
+}
+	/* flip the pane when hovered */
+	.flip-container.flip .flipper {
+		-webkit-transform: rotateY(180deg);
+		transform: rotateY(180deg);
+	}
+
+	.flip-container.flip .front {
+		opacity: 0;
+		-webkit-transition: 0s 0.2s;
+		transition: 0s 0.2s;
+	}
+
+/* flip speed goes here */
+.flipper {
+	-webkit-transition: 0.6s;
+	-webkit-transform-style: preserve-3d;
+	transition: 0.6s;
+	transform-style: preserve-3d;
+
+	position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+
+	border-radius: 0.5rem;
+
+	background: rgba(230, 230, 230, 0.7);
+}
+
+/* front pane, placed above back */
+.front {
+	z-index: 2;
+	-webkit-transition: 0s 0.2s;
+	transition: 0s 0.2s;
+}
+
+/* back, initially hidden pane */
+.back {
+	-webkit-transform: rotateY(180deg);
+	transform: rotateY(180deg);
+}
+
+/* Buttons */
+.daily-content-buttons {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	margin-bottom: 1.8rem;
+}
